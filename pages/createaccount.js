@@ -4,19 +4,30 @@ import Link from "next/link";
 import { Input, Spacer } from "@nextui-org/react";
 import Head from "next/head";
 
-const Login = () => {
+
+const SignUp = () => {
   return (
     <>
     <Head>
-      <title>Login | Venskart</title>
+      <title>Create account | Venskart</title>
     </Head>
       <div className={styles.parentContainer}>
         <div className={styles.leftContainer}>
           <h1>Graphics will go here.</h1>
         </div>
         <div className={styles.rightContainer}>
-          <h2 className={styles.loginTitle}>Login</h2>
+          <h2 className={styles.loginTitle}>Create an Account</h2>
           <form className={styles.loginForm}>
+            <Input
+              shadow={false}
+              underlined
+              // label="Email"
+              labelPlaceholder="Enter your Name"
+              required
+              type="text"
+              className={styles.loginInput}
+            />
+            <Spacer y={1.5} />
             <Input
               shadow={false}
               underlined
@@ -26,32 +37,38 @@ const Login = () => {
               type="email"
               className={styles.loginInput}
             />
+
             <Spacer y={1.5} />
             <Input.Password
               underlined
-              // labelLeft="lol"
-              // size="Small"
-              // label="Password"
               labelPlaceholder="Enter your Password"
               required
               type="password"
               className={styles.loginInput}
             />
+            <Spacer y={1.5} />
+            <Input.Password
+              underlined
+              labelPlaceholder="Confirm your Password"
+              required
+              type="password"
+              className={styles.loginInput}
+            />
             <Spacer y={1} />
-            <button className={styles.loginButton}>Login</button>
+
+            <button className={styles.loginButton}>SignUp</button>
+            <Spacer y={1} />
+
+            <div className={styles.createAcc}>
+              <Link href="/login">
+                <a className={styles.signUp}>Already have account? Login</a>
+              </Link>
+            </div>
           </form>
-          <div className={styles.createAcc}>
-            <Link href="/createaccount">
-              <a className={styles.signUp}>
-                New to Venskart? create an account
-              </a>
-            </Link>
-            {/* <button className={styles.createAccButton}>SignUp</button> */}
-          </div>
         </div>
       </div>
     </>
   );
 };
 
-export default Login;
+export default SignUp;

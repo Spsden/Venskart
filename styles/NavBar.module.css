@@ -6,7 +6,7 @@
   background-color: #01C5C4;
   /* background-color: #DF2E2E; */
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   z-index: 1000;
 }

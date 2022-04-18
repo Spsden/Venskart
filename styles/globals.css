@@ -16,8 +16,26 @@ a {
 }
 
 .active {
-  background-color: #ADEECF;
+  background-color: #adeecf;
   border-radius: 20px;
   color: #fff;
   transition: all 0.3s linear;
+}
+
+.button {
+  padding: 9px;
+  background-color: #01c5c4;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-style: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #02a5a5;
+}
+.button:active {
+  transform: scale(0.98);
 }

@@ -1,0 +1,43 @@
+.parentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.itemContainer {
+  padding: 2vh 8vh;
+  margin-bottom: 2vh;
+  background-color: aliceblue;
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.imageContainer {
+  width: 24vh;
+  height: 24vh;
+}
+.itemDetails {
+  margin: 0px 2vh;
+}
+.detailsSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.itemName {
+  font-weight: 660;
+  font-size: 1.8vh;
+}
+.colorText,
+.itemPrice,
+.seller,
+.mediatorName {
+  font-weight: 600;
+  color: #5e5e5e;
+}

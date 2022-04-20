@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 // import AllShops from '../components/Elements/AllShops';
 import all_shops from "../components/Elements/AllShops";
 import ShopThumb from "../components/Elements/ShopThumb";
+import TrendingProducts from "../components/Home/TrendingProducts";
 
 function Home() {
   const { parentCard, childCard, container, heading } = styles;
@@ -10,9 +11,8 @@ function Home() {
     return (
       <div className={parentCard}>
         {all_shops.map(({ id, shopName, address, image }) => (
-          <div className={childCard}>
+          <div className={childCard} key={id}>
             <ShopThumb
-              key={id}
               id={id}
               shopName={shopName}
               address={address}
@@ -26,9 +26,12 @@ function Home() {
 
   return (
     <div className={container}>
-      <h2 className={heading}>Shops in your area</h2>
+      <h2 className={heading}>Shops Nearby</h2>
       <div>
         <AllShops />
+        {/* <TrendingProducts /> */}
+        <TrendingProducts />
+
       </div>
     </div>
   );

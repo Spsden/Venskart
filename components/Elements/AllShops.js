@@ -1,5 +1,4 @@
-import ShopThumb from "./Elements/ShopThumb"
-import styles from "../styles/AllShops.module.css"
+import ShopThumb from "./ShopThumb"
 
 const all_shops = [
     {
@@ -56,19 +55,19 @@ const all_shops = [
 
 
 
-const AllShops = () => {
-    const listOfShops = all_shops.map((shop) => 
-    <ShopThumb key = {shop.id}
-    id = {shop.id}
-    shopName = {shop.shopName}
-    address = {shop.address}
-    image = {shop.image}/>);
+// const AllShops = () => {
+//     const listOfShops = all_shops.map((shop) => 
+//     <ShopThumb key = {shop.id}
+//     id = {shop.id}
+//     shopName = {shop.shopName}
+//     address = {shop.address}
+//     image = {shop.image}/>);
 
-    return (
-        <div className={styles.container}>
-            {listOfShops}
-        </div>
-    )
-}
+//     return (
+//         <div className={styles.container}>
+//             {listOfShops}
+//         </div>
+//     )
+// }
 
-export default AllShops;
+export default all_shops;

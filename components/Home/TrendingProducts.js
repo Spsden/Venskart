@@ -2,9 +2,10 @@ import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import { Card, Grid, Row, Text, css } from "@nextui-org/react";
 import styles from "../../styles/TrendingProducts.module.css";
+import { Loading } from "@nextui-org/react";
 
 const TrendingProducts = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState();
 
   useEffect(() => {
     axios
@@ -12,10 +13,17 @@ const TrendingProducts = () => {
       .then((res) => setProducts(res.data));
   }, []);
 
-  const { parentContainer, heading } = styles;
-  return (
+  const RenderFunction = () => {
+    return products ? (
+      <LoadedProducts />
+    ) : (
+      <Loading type="gradient" size="xl" align="center" />
+    );
+  };
+
+  //   When data is loaded
+  const LoadedProducts = () => (
     <>
-      <h2 className={heading}>Trending Today</h2>
       <div className={parentContainer}>
         <Grid.Container gap={2} justify="center">
           {products.map(
@@ -59,6 +67,14 @@ const TrendingProducts = () => {
         </Grid.Container>
       </div>
     </>
+  );
+
+  const { parentContainer, heading } = styles;
+
+  return (
+    <div className={styles.trendingParent}>
+     <RenderFunction />
+    </div>
   );
 };
 

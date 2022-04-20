@@ -39,3 +39,9 @@ a {
 .button:active {
   transform: scale(0.98);
 }
+
+.divider {
+  background-color: rgb(48, 42, 53);
+  height: 0.12vh;
+  margin: 3vh 0;
+}

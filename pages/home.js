@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import all_shops from "../components/Elements/AllShops";
 import ShopThumb from "../components/Elements/ShopThumb";
 import TrendingProducts from "../components/Home/TrendingProducts";
+import HorizontalDivider from "../components/Elements/HorizontalDivider";
 
 function Home() {
   const { parentCard, childCard, container, heading } = styles;
@@ -30,8 +31,10 @@ function Home() {
       <div>
         <AllShops />
         {/* <TrendingProducts /> */}
-        <TrendingProducts />
+        <HorizontalDivider />
 
+        <h2 className={heading}>Trending Today</h2>
+        <TrendingProducts />
       </div>
     </div>
   );

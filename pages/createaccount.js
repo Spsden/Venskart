@@ -4,17 +4,16 @@ import Link from "next/link";
 import { Input, Spacer } from "@nextui-org/react";
 import Head from "next/head";
 
-
 const SignUp = () => {
   return (
     <>
-    <Head>
-      <title>Create account | Venskart</title>
-    </Head>
+      <Head>
+        <title>Create account | Venskart</title>
+      </Head>
       <div className={styles.parentContainer}>
         <div className={styles.leftContainer}>
           {/* <h1>Graphics will go here.</h1> */}
-          <img src="./1.png" className="images" ></img>
+          <img src="./1.png" className={styles.images}></img>
         </div>
         <div className={styles.rightContainer}>
           <h2 className={styles.loginTitle}>Create an Account</h2>

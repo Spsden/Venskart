@@ -1,0 +1,18 @@
+.Carousel{
+    overflow:hidden;
+}
+
+.inner{
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+
+.Carousel-item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: aqua;
+    color: #fff;
+}

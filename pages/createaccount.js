@@ -13,7 +13,8 @@ const SignUp = () => {
     </Head>
       <div className={styles.parentContainer}>
         <div className={styles.leftContainer}>
-          <h1>Graphics will go here.</h1>
+          {/* <h1>Graphics will go here.</h1> */}
+          <img src="./1.png" className="images" ></img>
         </div>
         <div className={styles.rightContainer}>
           <h2 className={styles.loginTitle}>Create an Account</h2>

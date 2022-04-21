@@ -12,7 +12,8 @@ const Login = () => {
     </Head>
       <div className={styles.parentContainer}>
         <div className={styles.leftContainer}>
-          <h1>Graphics will go here.</h1>
+          <img src="./1.png" className="images"></img>
+          {/* <h1>Graphics will go here.</h1> */}
         </div>
         <div className={styles.rightContainer}>
           <h2 className={styles.loginTitle}>Login</h2>

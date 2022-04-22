@@ -4,16 +4,42 @@ import { Card, Grid, Row, Text } from "@nextui-org/react";
 import styles from "../../styles/TrendingProducts.module.css";
 import { Loading } from "@nextui-org/react";
 import TrendingProductsData from "../APIs/TrendingProductsData";
+import Link from "next/link";
+import Router from "next/router";
 
 const TrendingProducts = () => {
   const [products, setProducts] = useState();
 
+  // For passing data to details page
+  const sendProps = ({
+    title,
+    price,
+    description,
+    category,
+    image,
+    rating,
+    userRating
+  }) => {
+    Router.push({
+      pathname: "/productdetail",
+      query: {
+        // index,
+        title,
+        price,
+        description,
+        category,
+        image,
+        rating,
+        userRating
+      },
+    });
+  };
 
   // const TrendingItems = TrendingProductsData()
   useEffect(() => {
     // try {
 
-    // } catch(err) 
+    // } catch(err)
     // console.log(TrendingItems)
     axios
       .get("https://fakestoreapi.com/products")
@@ -40,8 +66,23 @@ const TrendingProducts = () => {
             ) => (
               <Grid key={index}>
                 {/* {console.log(rating.rate)} */}
-                <div className={styles.cardlol}>
-                  <Card hoverable css={{ height: 340 }} clickable>
+                <div className={styles.cardlol} key={index}>
+                  <Card
+                    onClick={() =>
+                      sendProps({
+                        title,
+                        price: Math.round(price),
+                        description,
+                        category,
+                        image,
+                        rating: rating.rate,
+                        userRating: rating.count,
+                      })
+                    }
+                    hoverable
+                    css={{ height: 340 }}
+                    clickable
+                  >
                     <Card.Body css={{ p: 0 }}>
                       <Card.Image
                         showSkeleton
@@ -57,7 +98,7 @@ const TrendingProducts = () => {
                         <Text
                           css={{ color: "$accents4", fontWeight: "$semibold" }}
                         >
-                          Price: Rs {price}
+                          Price: Rs {Math.round(price)}00
                         </Text>
                         <Text
                           css={{ color: "$accents4", fontWeight: "$semibold" }}

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   height: 12vh;
-  background-color: #01C5C4;
+  background-color: #01c5c4;
   /* background-color: #DF2E2E; */
   align-items: center;
   /* position: fixed; */
@@ -26,6 +26,7 @@
   font-size: 4.4vh;
   padding: 3px 20px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .tabText {
   text-decoration: none;
@@ -35,7 +36,7 @@
   font-size: 2.2vh;
   padding: 3px 15px;
   margin: 0 5px;
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s linear;

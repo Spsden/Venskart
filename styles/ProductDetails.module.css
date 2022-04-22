@@ -1,0 +1,67 @@
+.parentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 92vh;
+  /* background-color: rebeccapurple; */
+}
+.imageContainer {
+  width: 50vh;
+  margin: 10vh;
+}
+.detailsContainer {
+  width: 90vh;
+  /* background-color: rebeccapurple; */
+  padding-left: 4vh;
+  border-left-width: 1px;
+  border-left-color: black;
+  border-left-style: solid;
+}
+.productTitle {
+  font-size: 3.44vh;
+  font-weight: bold;
+}
+.priceRatingContainer {
+  font-size: 3.2vh;
+  font-weight: 600;
+}
+.ratingText {
+  font-size: 2vh;
+}
+.priceRating {
+  font-size: 2.5vh;
+  color: rgb(72, 72, 72);
+}
+.descriptionText {
+  font-size: 2vh;
+  color: rgb(129, 127, 127);
+}
+.ratingContainer {
+  display: flex;
+  flex-direction: row;
+}
+.ratingContainer p {
+  margin-right: 3vh;
+}
+.buttonContainer {
+  align-items: center;
+  text-align: center;
+}
+.buttonContainer button {
+  margin-right: 4vh;
+  border-radius: 10px;
+  font-size: 2.3vh;
+}
+
+.categoryText {
+  font-size: 2vh;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+}
+.assureText {
+  letter-spacing: 1.2px;
+  font-size: 2.4vh;
+  color: #01c5c4;
+  font-weight: bold;
+}

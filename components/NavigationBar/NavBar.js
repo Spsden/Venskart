@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/NavBar.module.css";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter, Router } from "next/router";
 
 // Pages
 
@@ -18,11 +18,15 @@ const NavBar = () => {
     <>
       <div className={styles.parentStyleContainer}>
         <div className={styles.betaSection}>
-          <h3 className={styles.name}>Venskart</h3>
+          <Link href="/" passHref>
+            <a className={styles.name}>Venskart</a>
+          </Link>
         </div>
         <nav className={styles.parentContainer}>
           <div className={styles.desktopBetaSection}>
-            <h3 className={styles.name}>Venskart</h3>
+            <Link href="/" passHref>
+              <h3 className={styles.name}>Venskart</h3>
+            </Link>
           </div>
           <ul className={styles.desktopNav}>
             <li>
@@ -30,7 +34,7 @@ const NavBar = () => {
                 <a className={isActive("/")}>Home</a>
               </Link>
             </li>
-            
+
             <li>
               <Link href="/cart" passHref className="tabText">
                 <a className={isActive("/cart")}>My Cart</a>
@@ -38,7 +42,13 @@ const NavBar = () => {
             </li>
             <li>
               <Link href="/myAccount" passHref className="tabText">
-                <a className={isActive("/myAccount" || "/login" || "/createaccount")}>My Account</a>
+                <a
+                  className={isActive(
+                    "/myAccount" || "/login" || "/createaccount"
+                  )}
+                >
+                  My Account
+                </a>
               </Link>
             </li>
           </ul>

@@ -5,6 +5,7 @@ import all_shops from "../components/Elements/AllShops";
 import ShopThumb from "../components/Elements/ShopThumb";
 import TrendingProducts from "../components/Home/TrendingProducts";
 import HorizontalDivider from "../components/Elements/HorizontalDivider";
+import Carousel from "../components/Home/Carousel";
 
 function Home() {
   const { parentCard, childCard, container, heading } = styles;
@@ -27,6 +28,7 @@ function Home() {
 
   return (
     <div className={container}>
+      <Carousel />
       <h2 className={heading}>Shops Nearby</h2>
       <div>
         <AllShops />

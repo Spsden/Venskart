@@ -38,7 +38,7 @@ const NavBar = () => {
             </li>
             <li>
               <Link href="/myAccount" passHref className="tabText">
-                <a className={isActive("/myAccount")}>My Account</a>
+                <a className={isActive("/myAccount" || "/login" || "/createaccount")}>My Account</a>
               </Link>
             </li>
           </ul>

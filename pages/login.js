@@ -3,16 +3,18 @@ import styles from "../styles/Login.module.css";
 import Link from "next/link";
 import { Input, Spacer } from "@nextui-org/react";
 import Head from "next/head";
+import Image from "next/image";
+import loginVector from "../public/Images/loginVector.png";
 
 const Login = () => {
   return (
     <>
-    <Head>
-      <title>Login | Venskart</title>
-    </Head>
+      <Head>
+        <title>Login | Venskart</title>
+      </Head>
       <div className={styles.parentContainer}>
         <div className={styles.leftContainer}>
-          <h1>Graphics will go here.</h1>
+          <Image alt="Login vector" src={loginVector} />
         </div>
         <div className={styles.rightContainer}>
           <h2 className={styles.loginTitle}>Login</h2>

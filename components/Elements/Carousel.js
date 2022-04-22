@@ -2,23 +2,18 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/dist/client/image";
-import styles from "../styles/Carousel.module.css";
+import styles from '../../styles/Carousel.module.css';
+
 import { Fade } from "react-awesome-reveal";
 
-import C1 from '../assets/images/carousel1.png'
-import C2 from '../assets/images/carousel2.png'
-// import C3 from '../assets/images/carousel3.png'
-// import C4 from '../assets/images/carousel4.png'
-// import C5 from '../assets/images/carousel5.png'
-// import C6 from '../assets/images/carousel6.png'
 
-// IMAGES
-// import C1 from "../../assets/images/carousel1.png";
-// import C2 from "../../assets/images/carousel2.png";
-// import C3 from "../../assets/images/carousel3.png";
-// import C4 from "../../assets/images/carousel4.png";
-// import C5 from "../../assets/images/carousel5.png";
-// import C6 from "../../assets/images/carousel6.png";
+//IMAGES
+import C1 from "../../assets/images/carousel1.png";
+import C2 from "../../assets/images/carousel2.png";
+import C3 from "../../assets/images/carousel1.png";
+import C4 from "../../assets/images/carousel2.png";
+import C5 from "../../assets/images/carousel1.png";
+import C6 from "../../assets/images/carousel2.png";
 
 const CarouselSection = () => {
   {

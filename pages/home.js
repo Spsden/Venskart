@@ -6,6 +6,8 @@ import ShopThumb from "../components/Elements/ShopThumb";
 import TrendingProducts from "../components/Home/TrendingProducts";
 import HorizontalDivider from "../components/Elements/HorizontalDivider";
 import { Carousel } from "react-responsive-carousel";
+import CarouselSection from "../components/Elements/Carousel";
+
 
 function Home() {
   const { parentCard, childCard, container, heading } = styles;
@@ -28,12 +30,16 @@ function Home() {
 
   return (
     <div className={container}>
+
       <h2 className={heading}>Offers</h2>
       <div>
-        <Carousel/>
+        <h3>AA JA BHAI</h3>
+        <CarouselSection/>
         <HorizontalDivider/>
       </div>
       
+
+
       <h2 className={heading}>Shops Nearby</h2>
       <div>
         <AllShops />

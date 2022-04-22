@@ -1,13 +1,20 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Card, Grid, Row, Text, css } from "@nextui-org/react";
+import { Card, Grid, Row, Text } from "@nextui-org/react";
 import styles from "../../styles/TrendingProducts.module.css";
 import { Loading } from "@nextui-org/react";
+import TrendingProductsData from "../APIs/TrendingProductsData";
 
 const TrendingProducts = () => {
   const [products, setProducts] = useState();
 
+
+  // const TrendingItems = TrendingProductsData()
   useEffect(() => {
+    // try {
+
+    // } catch(err) 
+    // console.log(TrendingItems)
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => setProducts(res.data));
@@ -73,7 +80,7 @@ const TrendingProducts = () => {
 
   return (
     <div className={styles.trendingParent}>
-     <RenderFunction />
+      <RenderFunction />
     </div>
   );
 };

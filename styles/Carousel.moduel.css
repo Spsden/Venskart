@@ -1,0 +1,29 @@
+.parentContainer {
+    margin: 60px 200px;
+  }
+  
+  .legend {
+    background-color: red;
+    font-size: 20px;
+  }
+  
+  .title {
+    font-size: 32px;
+    letter-spacing: 2.4px;
+  }
+  
+  /* IPAD OPTIMIZATION */
+  
+  @media screen and (max-width: 1220px) {
+    .parentContainer {
+      margin: 10px 30px;
+    }
+  }
+  
+  /* MOBILE OPTIMIZATIONS */
+  @media screen and (max-width: 870px) {
+    .parentContainer {
+      margin: 20px 10px;
+    }
+  }
+  
